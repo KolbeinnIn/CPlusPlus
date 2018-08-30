@@ -1,0 +1,23 @@
+#include "stdafx.h";
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	int ip1, ip2, ip3, ip4;
+	string ipstrengur;
+	cout << "Sláğu inn fyrsta part ip tölu: ";
+	cin >> ip1;
+	cout << endl;
+	cout << "Sláğu inn annan part ip tölu: ";
+	cin >> ip2;
+	cout << endl;
+	cout << "Sláğu inn thridja part ip tölu: ";
+	cin >> ip3;
+	cout << endl;
+	cout << "Sláğu inn fjorda part ip tölu: ";
+	cin >> ip4;
+	cout << endl;
+	cout << ip1 << "." << ip2 << "." << ip3 << "." << ip4;
+
+};
