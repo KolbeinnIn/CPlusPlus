@@ -19,5 +19,4 @@ int main(){
 	cin >> ip4;
 	cout << endl;
 	cout << ip1 << "." << ip2 << "." << ip3 << "." << ip4;
-
 };
