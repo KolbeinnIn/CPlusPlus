@@ -1,5 +1,10 @@
+/Skil0*/*
+/Skil0*/Debug/*.log
+/Skil0*/Debug/*.idb
+/Skil0*/Debug/*.pdb
 !/Skil0*/Debug/*.exe
 !/Skil0*/Debug/*.obj
+!/Skil0*/Debug
 !/Skil0*/*.cpp
 !/Skil0*/*.txt
 !/Skil0*/*.h
@@ -10,5 +15,3 @@
 !*.h
 !*.sln
 !*.vcxproj
-/Skil0*/
-/Skil0*/Debug/*
