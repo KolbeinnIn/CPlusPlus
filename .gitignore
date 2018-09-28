@@ -1,4 +1,4 @@
-!/Skil0*/Debug/Skil0*.exe
+!/Skil0*/Debug/*.exe
 !/Skil0*/Debug/*.obj
 !/Skil0*/*.cpp
 !/Skil0*/*.txt
@@ -10,5 +10,5 @@
 !*.h
 !*.sln
 !*.vcxproj
-/Skil0*
+/Skil0*/
 /Skil0*/Debug/*
