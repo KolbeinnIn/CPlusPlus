@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{94FCA16F-F6CA-4661-82AD-3E08B6A6A02C}</ProjectGuid>
+    <ProjectGuid>{049A2DAA-89B8-4ED0-B4F0-97B4B2880E68}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Skil02</RootNamespace>
   </PropertyGroup>

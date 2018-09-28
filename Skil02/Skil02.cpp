@@ -1,4 +1,4 @@
-ï»¿//Kolbeinn IngÃ³lfsson
+//Kolbeinn Ingólfsson
 //25.09.2018
 //Skilaverkefni 2 - subnetting C++
 
@@ -19,7 +19,7 @@ void ip2fylki(int *ipTolur, int ipTala) {
 }
 
 void synaIpTolu(const char*texti, int *ipTolur) {
-	
+
 	for (int i = 0; i < 4; i++) {
 		if (i != 3) {
 			cout << ipTolur[i] << ".";
@@ -88,7 +88,7 @@ int main() {
 	subnetBitar = ceil(log2(subnet));
 	subnetting(ip2Dec, prefix, subnetBitar);
 
-	/* skemmtileg leid til ad breyta prefix-inu Ã­ subnet maska i binary.
+	/* skemmtileg leid til ad breyta prefix-inu í subnet maska i binary.
 
 	for (int i = 0; i < 32; i++){
 	if (i % 8 == 0 && i != 0){
