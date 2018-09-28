@@ -1,0 +1,12 @@
+!/Skil0*/Debug/Skil0*.exe
+!/Skil0*/Debug/*.obj
+!/Skil0*/*.cpp
+!/Skil0*/*.txt
+!/Skil0*/*.h
+!/Skil0*/*.sln
+!/Skil0*/*.vcxproj
+!*.cpp
+!*.txt
+!*.h
+*.sln
+!*.vcxproj
