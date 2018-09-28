@@ -1,4 +1,5 @@
 /Skil0*/*
+/Skil0*/Debug/*
 /Skil0*/Debug/*.log
 /Skil0*/Debug/*.idb
 /Skil0*/Debug/*.pdb
