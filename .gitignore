@@ -11,6 +11,7 @@
 !/Skil0*/*.h
 !/Skil0*/*.sln
 !/Skil0*/*.vcxproj
+!/Skil0*/*.vcxproj.filters
 !*.cpp
 !*.txt
 !*.h
