@@ -2,14 +2,11 @@
 //25.09.2018
 //Skilaverkefni 2 - subnetting C++
 
-
 #include "stdafx.h"
 #include <iostream>
 #include <math.h>
 
-
 using namespace std;
-
 
 void ip2fylki(int *ipTolur, int ipTala) {
 	ipTolur[0] = (ipTala >> 24) & 0xff;
@@ -76,6 +73,7 @@ int main() {
 	for (int i = 0; i < 4; i++) {
 		cin >> ipTolur[i];
 	}
+
 	cout << endl << "Fjoldi netbita i upphafsneti: ";
 	cin >> prefix;
 	cout << endl << "Fjoldi neta sem a ad skipta upphafsnetinu i: ";
