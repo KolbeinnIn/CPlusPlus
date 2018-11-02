@@ -1,44 +1,47 @@
 #include "stdafx.h"
 #include <iostream>
+#include <sstream>
 #include <string>
 
 using namespace std;
 
 class FlightBooking {
-public:
-	FlightBooking(int id, int capacity, int reserved);
-	void printStatus();
-	bool reserveSeats(int number_ob_seats);
-	bool canceReservations(int number_ob_seats);
-private:
-	int id;
-	int capacity;
-	int reserved;
+	private:
+		int id;
+		int capacity;
+		int reserved;
+
+	public:
+		FlightBooking(int i, int cap, int res) {
+			id = i;
+			capacity = cap;
+			reserved = res;
+		}
+		void printStatus() {
+			int perc = (double)reserved / capacity * 100;
+			cout << "Flight " << id << " : " << reserved << "/" << capacity << " (" << (perc) << "\%) seats reserved." << endl;
+		}
+
+		bool reserveSeats(int number_ob_seats) {
+			if (reserved + number_ob_seats > round(capacity * 1.05))
+				cout << "Cannot perform this operation" << endl;
+			else reserved += number_ob_seats;
+			return 0;
+		}
+		bool cancelReservations(int number_ob_seats){
+			if (number_ob_seats < 0)
+				cout << "Cannot perform this operation" << endl;
+			else reserved -= number_ob_seats;
+			return 0;
+		}
 };
 
-FlightBooking::FlightBooking(int id, int capacity, int reserved) {
-	this->id = id;
-	this->capacity = capacity;
-	this->reserved = reserved;
-}
 
-void FlightBooking::printStatus() {
-	int perc = (double)reserved / capacity * 100;
-	cout << "Flight " << id << " : " << reserved << "/" << capacity << " (" << (perc) << "\%) seats reserved." << endl;
-}
 
-bool FlightBooking::reserveSeats(int number_ob_seats) {
-	// try to add reservations and return 'true' on success keep the limits in mind  
-	return false;
-}
-bool FlightBooking::canceReservations(int number_ob_seats){
-
-	// try to cancel reservations and return 'true' on success keep the  limits in mind  
-	return false;
-}
 
 int main() {
 	int reserved = 0, capacity = 0, max = 0;
+	
 	cout << "Provide flight capacity: ";
 	cin >> capacity;
 	max = round(capacity * 1.05);
@@ -46,8 +49,26 @@ int main() {
 		cout << "Provide number of reserved seats: ";
 		cin >> reserved;
 	}
+	if (reserved < 0)
+		reserved = 0;	
+	FlightBooking booking = FlightBooking(1, capacity, reserved);
+	string command;
+	int /*id,*/ n;
+	while (command != "quit") {
+		booking.printStatus();
+		cout << "What would you like to do?: ";
+		getline(cin, command);
 
-	FlightBooking booking(1, capacity, reserved);
+		stringstream ss;
+		ss << command;
+		ss >> command /*>> id*/ >> n;
+
+		if (command == "add")
+			booking.reserveSeats(n);
+		if (command == "cancel")
+			booking.cancelReservations(n);
+	}
+	
 	booking.printStatus();
 	return 0;
 }
