@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include <iostream>
 #include <sstream>
-#include <string>
 
 using namespace std;
 
@@ -17,23 +16,32 @@ class FlightBooking {
 			capacity = cap;
 			reserved = res;
 		}
+		FlightBooking() {
+			id = 0;
+			capacity = 0;
+			reserved = 0;
+		}
 		void printStatus() {
 			int perc = (double)reserved / capacity * 100;
-			cout << "Flight " << id << " : " << reserved << "/" << capacity << " (" << (perc) << "\%) seats reserved." << endl;
+			cout << endl << "Flight " << id << " : " << reserved << "/" << capacity << " (" << (perc) << "\%) seats reserved.";
 		}
 
-		bool reserveSeats(int number_ob_seats) {
-			if (reserved + number_ob_seats > round(capacity * 1.05))
+		void reserveSeats(int number_ob_seats) {
+			if (reserved + number_ob_seats > round(capacity * 1.05) || number_ob_seats < 0)
 				cout << "Cannot perform this operation" << endl;
 			else reserved += number_ob_seats;
-			return 0;
 		}
-		bool cancelReservations(int number_ob_seats){
-			if (number_ob_seats < 0)
+		void cancelReservations(int number_ob_seats){
+			if (number_ob_seats < 0 || reserved - number_ob_seats < 0)
 				cout << "Cannot perform this operation" << endl;
 			else reserved -= number_ob_seats;
-			return 0;
 		}
+		int returnId(){
+			return id;
+		}
+		
+
+		
 };
 
 
@@ -41,6 +49,7 @@ class FlightBooking {
 
 int main() {
 	int reserved = 0, capacity = 0, max = 0;
+	int teljari = 0;
 	
 	cout << "Provide flight capacity: ";
 	cin >> capacity;
@@ -50,25 +59,38 @@ int main() {
 		cin >> reserved;
 	}
 	if (reserved < 0)
-		reserved = 0;	
-	FlightBooking booking = FlightBooking(1, capacity, reserved);
-	string command;
-	int /*id,*/ n;
+		reserved = 0;
+
+	FlightBooking booking[10];
+	booking[0].func(a);
+	string command = "";
+	int id, n;
 	while (command != "quit") {
-		booking.printStatus();
-		cout << "What would you like to do?: ";
+		booking[id].printStatus();
+		cout << endl << "What would you like to do?: ";
 		getline(cin, command);
 
 		stringstream ss;
 		ss << command;
-		ss >> command /*>> id*/ >> n;
+		cout << endl;
+		ss >> command >> id >> n;
 
 		if (command == "add")
-			booking.reserveSeats(n);
+			booking[id].reserveSeats(n);
 		if (command == "cancel")
-			booking.cancelReservations(n);
+			booking[id].cancelReservations(n);
+		if (command == "create"){
+			int q = teljari;
+			for (int i = 0; i < 10; i++){
+				if (booking[i].returnId() == -1){
+					q = i;
+				}
+				booking[q] = FlightBooking(id, n, 0);
+				teljari += 1;
+			}
+		}
 	}
 	
-	booking.printStatus();
+	
 	return 0;
 }
