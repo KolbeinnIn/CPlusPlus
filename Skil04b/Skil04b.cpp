@@ -62,7 +62,6 @@ int main() {
 		reserved = 0;
 
 	FlightBooking booking[10];
-	booking[0].func(a);
 	string command = "";
 	int id, n;
 	while (command != "quit") {
