@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Skil04b", "Skil04b.vcxproj", "{9914B1A2-CCD4-4A0D-912A-17AFEF356144}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hlutapróf 7", "Hlutapróf 7.vcxproj", "{3AA97DED-D855-4845-B643-AB0E93375D2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9914B1A2-CCD4-4A0D-912A-17AFEF356144}.Debug|Win32.ActiveCfg = Debug|Win32
-		{9914B1A2-CCD4-4A0D-912A-17AFEF356144}.Debug|Win32.Build.0 = Debug|Win32
-		{9914B1A2-CCD4-4A0D-912A-17AFEF356144}.Release|Win32.ActiveCfg = Release|Win32
-		{9914B1A2-CCD4-4A0D-912A-17AFEF356144}.Release|Win32.Build.0 = Release|Win32
+		{3AA97DED-D855-4845-B643-AB0E93375D2B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3AA97DED-D855-4845-B643-AB0E93375D2B}.Debug|Win32.Build.0 = Debug|Win32
+		{3AA97DED-D855-4845-B643-AB0E93375D2B}.Release|Win32.ActiveCfg = Release|Win32
+		{3AA97DED-D855-4845-B643-AB0E93375D2B}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

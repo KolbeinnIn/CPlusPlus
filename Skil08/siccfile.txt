@@ -1,0 +1,3 @@
+vo strengur1
+vo strengur2
+vo strengur3

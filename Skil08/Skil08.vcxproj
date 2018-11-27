@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{9914B1A2-CCD4-4A0D-912A-17AFEF356144}</ProjectGuid>
+    <ProjectGuid>{611B8392-2DAC-4F45-9EF6-E2BDB404B9C0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Skil04b</RootNamespace>
+    <RootNamespace>Skil08</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -83,7 +83,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Skil04b.cpp" />
+    <ClCompile Include="Skil08.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
